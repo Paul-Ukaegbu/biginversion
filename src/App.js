@@ -1,24 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import './components/NewComponent'
+
+const PersonCard = props => {
+  return (
+    <div>
+       <h1>{props.lastName}, {props.firstName}</h1>
+          <p>Age: {props.age}</p>
+          <p>Hair Color: {props.hairColor}</p>    
+    </div>
+    );
+  }
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <PersonCard 
+      firstName="Jane" 
+      lastName="Doe" 
+      age={45} 
+      hairColor="Black"/> 
+
+      <PersonCard 
+      firstName="John" 
+      lastName="Smith" 
+      age={88} 
+      hairColor="Brown"/> 
+
+      <PersonCard 
+      firstName="Millard" 
+      lastName="Fillmore" 
+      age={50} 
+      hairColor="Brown"/> 
+
+      <PersonCard 
+      firstName="Maria" 
+      lastName="Smith" 
+      age={62} 
+      hairColor="Brown"/> 
+
     </div>
   );
 }
